@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 - Traffic Signal Simulator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Traffic Signal Simulator</h2>
+
+        <!-- ট্রাফিক লাইট ভিজ্যুয়াল -->
+        <div class="traffic-light">
+            <div class="light" id="redLight"></div>
+            <div class="light" id="yellowLight"></div>
+            <div class="light" id="greenLight"></div>
+        </div>
+
+        <!-- সিগন্যাল পরিবর্তনের বাটন -->
+        <div class="btn-group">
+            <button class="btn-red" onclick="checkSignal('red')">Red</button>
+            <button class="btn-yellow" onclick="checkSignal('yellow')">Yellow</button>
+            <button class="btn-green" onclick="checkSignal('green')">Green</button>
+            <button class="btn-reset" onclick="checkSignal('reset')">Reset</button>
+        </div>
+
+        <div class="message" id="signalOutput">SELECT A SIGNAL</div>
+    </div>
+
+    <script>
+        function checkSignal(color) {
+            let action = "";
+
+            // সব লাইট আগে অফ (ধূসর) করা
+            document.getElementById("redLight").style.backgroundColor = "#444";
+            document.getElementById("yellowLight").style.backgroundColor = "#444";
+            document.getElementById("greenLight").style.backgroundColor = "#444";
+
+            // Switch Case ব্যবহার করে কন্ডিশন চেক
+            switch (color.toLowerCase()) {
+                case "red":
+                    action = "STOP";
+                    document.getElementById("redLight").style.backgroundColor = "#ff4d4d";
+                    document.getElementById("signalOutput").style.color = "#ff4d4d";
+                    break;
+                case "yellow":
+                    action = "READY";
+                    document.getElementById("yellowLight").style.backgroundColor = "#ffaa00";
+                    document.getElementById("signalOutput").style.color = "#ffaa00";
+                    break;
+                case "green":
+                    action = "GO";
+                    document.getElementById("greenLight").style.backgroundColor = "#2ecc71";
+                    document.getElementById("signalOutput").style.color = "#2ecc71";
+                    break;
+                case "reset":
+                    action = "SELECT A SIGNAL";
+                    document.getElementById("redLight").style.backgroundColor = "#000";
+                    document.getElementById("yellowLight").style.backgroundColor = "#000";
+                    document.getElementById("greenLight").style.backgroundColor = "#000";
+                    document.getElementById("signalOutput").style.color = "#000";
+                    break;
+                default:
+                    action = "INVALID SIGNAL";
+                    document.getElementById("signalOutput").style.color = "#000";
+            }
+
+            // স্ক্রিনে মেসেজ দেখানো
+            document.getElementById("signalOutput").innerText = action;
+        }
+    </script>
+
+</body>
+
+</html>

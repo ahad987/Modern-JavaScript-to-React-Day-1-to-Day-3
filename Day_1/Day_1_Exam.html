@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 Exam</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    student_name
+    student_age
+    student_email
+    student_result
+
+    Print all values.
+
+    <div class="output-box">
+        <h3>Exam Output</h3>
+        <p id="exam_id"></p>
+    </div>
+
+    <script>
+        const student_name = "Abdul Ahad Chowdhury";
+        const student_age = 23;
+        const student_email = "ahad987@gmail.com";
+        const student_result = 3.63;
+
+        console.log(student_name);
+        console.log(student_age);
+        console.log(student_email);
+        console.log(student_result);
+
+        // ওয়েব পেজে দেখানোর জন্য innerHTML ব্যবহার করা হয়েছে
+        document.getElementById("exam_id").innerHTML = 
+        `Name: ${student_name}<br>
+        Age: ${student_age}<br>
+        E-mail: ${student_email}<br>
+        Result: ${student_result}`;
+        
+    </script>
+</body>
+
+</html>

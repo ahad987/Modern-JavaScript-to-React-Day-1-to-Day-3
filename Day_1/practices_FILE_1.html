@@ -1,0 +1,89 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    
+    <script>
+        document.getElementById("demo").innerHTML = "<h2>Hello World</h2>";
+    </script>
+
+    
+    
+    <script>
+        const name = "Ahad";
+        const age = 28;
+        const isDeveloper = true;
+
+        console.log(name);
+        console.log(age);
+        console.log(isDeveloper);
+
+        
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Day 1 Practice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h2>JavaScript Day 1 Output</h2>
+
+    <!-- Practice অংশের আউটপুট দেখার জায়গা -->
+    <div class="output-box">
+        <h3>Practice Output:</h3>
+        <p id="practice-output"></p>
+    </div>
+
+    <!-- Mini Exercise অংশের আউটপুট দেখার জায়গা -->
+    <!-- <div class="output-box">
+        <h3>Mini Exercise Output:</h3>
+        <p id="exercise-output"></p>
+    </div> -->
+
+    <script>
+        // === Practice Part ===
+        const name = "Ahad";
+        const age = 28;
+        const isDeveloper = true;
+
+        // ব্রাউজার কনসোলে দেখার জন্য (F12 টিপলে দেখা যাবে)
+        console.log(name);
+        console.log(age);
+        console.log(isDeveloper);
+
+        // ওয়েব পেজে দেখানোর জন্য innerHTML ব্যবহার করা হয়েছে
+        document.getElementById("practice-output").innerHTML = 
+            `Name: ${name} <br> 
+             Age: ${age} <br> 
+             Is Developer: ${isDeveloper}`;
+
+
+        // === Mini Exercise Part ===
+        // const student_name = "Abir";
+        // const student_age = 20;
+        // const student_email = "abir@example.com";
+        // const student_result = 3.85;
+
+        // ওয়েব পেজে মিনি এক্সারসাইজের আউটপুট প্রদর্শন
+        // document.getElementById("exercise-output").innerHTML = 
+        //     `Student Name: ${student_name} <br> 
+        //      Student Age: ${student_age} <br> 
+        //      Student Email: ${student_email} <br> 
+        //      Student Result: ${student_result}`;
+    </script>
+
+</body>
+</html>
